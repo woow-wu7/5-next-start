@@ -1,4 +1,5 @@
 // 静态生成
+import styles from "./test-getStaticProps.module.scss";
 
 export const getStaticProps = async () => {
   // translate
@@ -17,7 +18,7 @@ export const getStaticProps = async () => {
 
 const TestGetStaticProps = ({ data }) => {
   return (
-    <div>
+    <div className={styles.wrap}>
       <div>{data.info}</div>
     </div>
   );
