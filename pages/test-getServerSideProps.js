@@ -1,12 +1,18 @@
+// 服务端渲染
 // 静态生成
 
-export const getStaticProps = async () => {
+const TestGetServerSideProps = ({ data }) => {
+  return <div>{data.info}</div>;
+};
+
+export const getServerSideProps = async () => {
   // translate
   const url =
     "https://api.66mz8.com/api/translation.php?info=I come from China";
 
   const res = await fetch(url);
   const data = await res.json();
+  console.log("data: ", data);
 
   return {
     props: {
@@ -15,12 +21,4 @@ export const getStaticProps = async () => {
   };
 };
 
-const TestGetStaticProps = ({ data }) => {
-  return (
-    <div>
-      <div>{data.info}</div>
-    </div>
-  );
-};
-
-export default TestGetStaticProps;
+export default TestGetServerSideProps;

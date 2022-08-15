@@ -1,3 +1,5 @@
+// 静态生成
+
 const TestGetStaticPaths = ({ data }) => {
   return data.data.map((item, index) => (
     <div key={index}>
