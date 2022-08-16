@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   count: 1,
+  tick: "TICK",
 };
 
 // slick 分片
@@ -14,6 +15,10 @@ export const counterSlick = createSlice({
     },
     dec(state, action) {
       state.count = state.count - action.payload;
+    },
+    lower(state, action) {
+      console.log("action", action);
+      state.tick = action.payload;
     },
   },
   extraReducers: (builder) => {

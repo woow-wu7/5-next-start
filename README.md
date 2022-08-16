@@ -4,12 +4,13 @@
 
 ## 工具链
 
+> redux + react-redux + redux-toolkit + next-redux-wrapper
+
 - redux-toolkit
   - 官网 https://redux-toolkit.js.org/usage/usage-with-typescript#type-safety-with-extrareducers
   - 教程 https://blog.csdn.net/yehuozhili/article/details/119674313
 - next-redux-wrapper
-  - 官网
-  - 教程
+  - 官网 https://github.com/kirill-konshin/next-redux-wrapper
 
 ## getStaticProps 和 getServerSideProps 和 getInitialProps 的区别？
 
